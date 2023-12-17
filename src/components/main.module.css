@@ -1,0 +1,14 @@
+.outter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(20, 14.3%, 4.1%);
+}
+
+.inner {
+  width: 1000px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

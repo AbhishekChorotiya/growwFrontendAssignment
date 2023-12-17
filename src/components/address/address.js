@@ -14,7 +14,7 @@ const Address = () => {
           <rect x="0" fill="none" width="24" height="24" />
 
           <g>
-            <path d="M7 10l5 5 5-5" />
+            <path d="M7 10l5 5 5-5" fill='var(--primary)'/>
           </g>
         </svg>
       </button>

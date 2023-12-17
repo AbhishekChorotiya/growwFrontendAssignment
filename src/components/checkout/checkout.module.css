@@ -1,5 +1,5 @@
 .checkout {
-  background-color: hsl(20, 14.3%, 4.1%);
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
@@ -15,18 +15,97 @@
 .details{
   display: flex;
   width: 100%;
-  min-height: 20rem;
+  height: 27rem;
   margin-top: 1rem;
+  /* border: 2px solid gold; */
   justify-content: space-between;
 }
 
 .left{
   width: 60%;
-  /* border: 2px solid gold; */
+  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+
+.left:hover{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.left::-webkit-scrollbar {
+  width: 2px;
+}
+
+ 
+.left::-webkit-scrollbar-thumb {
+  background: var(--primary); 
+}
+
+.left::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-foreground); 
+}
+
 .right{
   width: 30%;
-  border: 2px solid gray;
-  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid gray; */
+  padding: 1rem 0;
   border-radius: 0.2rem;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.right .data{
+  display: flex;
+  justify-content: space-between;
+  color: var(--foreground);
+}
+
+.address_inner{
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  margin: 1rem 0;
+}
+.address_inner span{
+  color: var(--primary);
+  /* background-color: hsl(142.1, 70.6%, 45.3%); */
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.address_inner input{
+  height: 100%;
+  color: gray;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  border: 0;
+  font-size: 1rem;
+  justify-content: center;
+  padding-left: 1rem;
+}
+.address_inner input:focus{
+  border: none;
+  outline: none;
+}
+
+.checkout_btn{
+  background-color:var(--primary);
+  color: var(--primary-foreground);
+  height: 2rem;
+  border-radius: 0.2rem;
+  border: none;
+  margin: 1rem 0;
+  font-size: 1rem;
+  cursor: pointer;
 }

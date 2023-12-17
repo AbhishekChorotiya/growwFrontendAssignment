@@ -1,12 +1,19 @@
 import React from "react";
 import classes from './card.module.css'
 
-const Card = () => {
+const Card = (props) => {
+
+  const title = props.title
+  const quantity = props.quantity
+  const price = props.price
+  const image = props.image
+  const id = props.id
+
   return (
     <>
       <div className={classes.card}>
         <div className={classes.product_img}>
-          <img src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"></img>
+          <img src={image}></img>
         </div>
         <div className={classes.product_detail}>
           <div className={classes.product_detail_left}>
@@ -18,21 +25,20 @@ const Card = () => {
             </div>
             <div className={classes.title_warp}>
               <p className={classes.title}>
-                Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor
-                (LC49HG90DMNXZA) – Super Ultrawide Screen QLED
+                {title}
               </p>
             </div>
             <div className={classes.price_div}>
-              <span className={classes.price}>$199</span>
+              <span className={classes.price}>{price}</span>
               <span className={classes.price}>X</span>
-              <span className={classes.price}>3</span>
+              <span className={classes.price}>{quantity}</span>
               <span className={classes.price}>=</span>
-              <span className={classes.price_total}>$597</span>
+              <span className={classes.price_total}>${price*quantity}</span>
             </div>
           </div>
           <div className={classes.product_detail_right}>
-            <span>-</span>
-            <span>3</span>
+            <span style={{wordSpacing:'0'}}>--</span>
+            <span>{quantity}</span>
             <span>+</span>
           </div>
         </div>

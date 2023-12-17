@@ -1,8 +1,15 @@
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --primary: hsl(240, 5.9%, 10%);
+  --primary-foreground: hsl(0, 0%, 98%);
+}
+
 .outter {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: hsl(20, 14.3%, 4.1%);
+  background-color: var(--background);
 }
 
 .inner {

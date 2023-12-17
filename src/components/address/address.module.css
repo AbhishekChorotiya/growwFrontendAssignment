@@ -5,7 +5,7 @@
     /* flex-direction: column; */
     align-items: center;
     font-size: medium;
-    height: 4.5rem;
+    height: 4rem;
     justify-content: space-between;
 }
 
@@ -13,8 +13,8 @@
     width: fit-content;
     display: flex;
     height: 100%;
-    border: 2px solid hsl(142.1, 70.6%, 45.3%);
-    background-color: hsl(142.1, 70.6%, 45.3%);
+    border: 1px solid gray;
+    /* background-color: var(--primary); */
     border-radius: 0.2rem;
 }
 
@@ -24,19 +24,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(144.9, 80.4%, 10%);
+    color: var(--primary);
     font-weight: bold;
 }
 .address_inner div{
-    background-color: hsl(0, 0%, 95%);
-    width: 28rem;
+    /* background-color: var(--foreground); */
+    width: 26rem;
     display: flex;
     align-items: center;
     padding: 0 1rem;
+    /* border-left: 1px solid var(--primary); */
+    /* border-right: 1px solid var(--primary); */
 }
 
 .address_inner input{
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--background);
     width: 13rem;
     display: flex;
     align-items: center;
@@ -44,10 +46,11 @@
     height: 100%;
     border: none;
     font-size: 1.2rem;
-    color: hsl(144.9, 80.4%, 10%);
+    color: var(--foreground);
     border-end-end-radius: 0.2rem;
     border-top-right-radius: 0.2rem;
     /* background-color: transparent; */
+    /* border-left: 1px solid hsl(142.1, 70.6%, 45.3%); */
 
 
 }
@@ -64,7 +67,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   min-width: 0;
-  color: hsl(144.9, 80.4%, 10%);
+  color: var(--foreground);
 }
 
 
@@ -75,6 +78,7 @@
     justify-content: center;
     border: none;
     background-color: transparent;
-    color: hsl(144.9, 80.4%, 10%);
+    color: var(--primary-foreground);
     cursor: pointer;
 }
+

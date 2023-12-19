@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from "react";
-import Checkout from "./checkout/checkout";
+import { useEffect } from "react";
 import classes from "./main.module.css";
-const Main = () => {
+import { useMerchantDataStore } from "./store/zustland";
+import { useQuery } from "react-query";
 
-  const [theme,setTheme] = useState({})
+const Main = (props) => {
 
-  useEffect(()=>{
-    fetchTheme()
-  },[])
+  const {theme} = useMerchantDataStore()
 
-  async function fetchTheme(){
-    const res = await fetch('https://groww-intern-assignment.vercel.app/v1/api/merchant-metadata')
-    const data = await res.json()
-    setTheme(data.theme)
+  useQuery('merchant-data',fetchTheme)
+
+  async function fetchTheme() {
+    const res = await fetch(
+      "https://groww-intern-assignment.vercel.app/v1/api/merchant-metadata"
+    );
+    const data = await res.json();
+    useMerchantDataStore.setState({
+      theme: data.theme,
+      name: data.name,
+      logo: data.logo,
+    });
   }
-
 
   return (
     <>
-      <div className={classes.outter} style={theme}>
-        <div className={classes.inner}>
-          <Checkout />
-        </div>
+      <div className={classes.outter_main} style={theme}>
+        <div className={classes.inner_main}>{props.children}</div>
       </div>
     </>
   );

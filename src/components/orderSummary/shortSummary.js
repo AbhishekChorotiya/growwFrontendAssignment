@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./summary.module.css";
 import { useNavigate } from "react-router-dom";
+import { useProductsStore } from "../store/zustland";
 
-const Summary = (props) => {
-  const subtotal = props.subtotal;
-  const tax = props.tax;
+const ShortSummary = (props) => {
+  const {subtotal,tax} = useProductsStore()
   const navigate = useNavigate()
 
   return (
@@ -40,13 +40,10 @@ const Summary = (props) => {
           ${Math.ceil((subtotal + tax) * 100) / 100}
         </span>
       </div>
-      <div className={classes.address_inner}>
-        <input type="text" placeholder="Have any Coupon ?" />
-        <span>APPLY</span>
-      </div>
-      <button className={classes.checkout_btn} onClick={()=>navigate('/payment')}>Confirm Checkout</button>
+
+      <button className={classes.checkout_btn} style={{marginTop:'2rem'}} onClick={()=>navigate('/')}>Place Order</button>
       </>
   );
 };
 
-export default Summary;
+export default ShortSummary;

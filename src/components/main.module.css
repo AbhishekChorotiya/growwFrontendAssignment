@@ -5,14 +5,14 @@
   --primary-foreground: hsl(0, 0%, 98%);
 }
 
-.outter {
+.outter_main {
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: var(--background);
 }
 
-.inner {
+.inner_main {
   width: 1000px;
   min-height: 100vh;
   display: flex;

@@ -1,7 +1,16 @@
 import React from 'react'
 import classes from './address.module.css'
+import { useUserDataStore } from '../store/zustland'
 
 const Address = () => {
+
+  function handleChange(e){
+    useUserDataStore.setState({
+      contact:e.target.value
+    })
+  }
+
+
   return (
     <div className={classes.address}>
     <div className={classes.address_inner}>
@@ -22,7 +31,7 @@ const Address = () => {
 
     <div style={{ marginLeft: "1rem" }} className={classes.address_inner}>
       <span>Contact</span>
-      <input type="text" placeholder="+91 XXXXX XXXXX" />
+      <input type="text" placeholder="+91 XXXXX XXXXX" maxLength={15} onChange={handleChange} />
     </div>
   </div>
   )

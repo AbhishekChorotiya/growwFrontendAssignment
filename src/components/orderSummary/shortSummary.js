@@ -1,11 +1,9 @@
 import React from "react";
 import classes from "./summary.module.css";
-import { useNavigate } from "react-router-dom";
 import { useProductsStore } from "../store/zustland";
 
 const ShortSummary = (props) => {
   const {subtotal,tax} = useProductsStore()
-  const navigate = useNavigate()
 
   return (
     <>
@@ -41,7 +39,7 @@ const ShortSummary = (props) => {
         </span>
       </div>
 
-      <button className={classes.checkout_btn} style={{marginTop:'2rem'}} onClick={()=>navigate('/')}>Place Order</button>
+      <button className={classes.checkout_btn} style={{marginTop:'2rem'}} onClick={props.submit}>Place Order</button>
       </>
   );
 };

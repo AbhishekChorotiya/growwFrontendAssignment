@@ -15,7 +15,7 @@ export const useMerchantDataStore = create((set) => ({
 
 export const useUserDataStore = create((set) => ({
   contact: "",
-  payment_method: "",
+  payment_method: "cards",
   card: {
     name: "",
     number: "",

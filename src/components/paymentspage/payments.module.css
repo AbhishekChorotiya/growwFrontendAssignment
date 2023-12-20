@@ -1,6 +1,7 @@
 .outter_box {
   margin: 1rem 0;
-  width: 90%;
+  width: 100%;
+  /* border: 2px solid red; */
   height: 35rem;
   display: flex;
   justify-self: center;
@@ -11,7 +12,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  /* border: 2px solid var(--primary); */
+  padding-right: 3rem;
 }
 
 .upper {
@@ -19,7 +20,6 @@
   flex-direction: column;
   height: 50%;
   padding: 1rem 2rem;
-  /* border: 2px solid var(--primary); */
 }
 
 .lower {
@@ -28,24 +28,15 @@
   height: 50%;
   padding: 1rem 2rem;
   overflow: hidden;
-  /* border: 2px solid var(--primary); */
 }
-
 
 .right {
   width: 50%;
+  padding-left: 3rem;
+  border-left: 1px solid gray;
 }
 
-.upper input {
-  border: 1px solid var(--primary);
-  background-color: transparent;
-  height: 3rem;
-  margin: 0.5rem 0;
-  padding: 0 1rem;
-  border-radius: 0.2rem;
-  color: var(--foreground);
-  font-size: 1.1rem;
-}
+.upper input,
 .lower input {
   border: 1px solid var(--primary);
   background-color: transparent;
@@ -90,8 +81,21 @@
   justify-content: center;
 }
 
+.expiry_warp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expiry_warp input{
+  width: 48%;
+}
+
+.input_warp{
+  justify-content: space-between;
+}
+
 .upi_warp div {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,6 +108,7 @@
   border: 1px solid var(--foreground);
   cursor: pointer;
 }
+
 .upi_warp div:hover {
   border: 3px solid var(--primary);
 }
@@ -114,3 +119,60 @@
   object-fit: contain;
   mix-blend-mode: multiply;
 }
+
+@media (max-width: 900px) {
+
+  .left{
+    padding-right: 0;
+  }
+
+  .right{
+    padding-left: 0;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .outter_box{
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .left,.right{
+    width: 30rem;
+  }
+
+  .right{
+    border: none;
+  }
+
+  .lower,.right,.left,.upper{
+    border: none;
+    height: fit-content;
+    max-height: 100%;
+  }
+
+
+
+}
+
+@media (max-width: 500px) {
+  .left,.right{
+    width: 100%;
+  }
+
+  .expiry_warp{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .outter_box{
+    height: fit-content;
+    margin-bottom: 0;
+  }
+}
+
+

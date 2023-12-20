@@ -164,7 +164,7 @@ const Payments = (props) => {
           <div className={classes.lower}></div>
         </div>
 
-        <div className={classes.right} style={{ borderLeft: "1px solid gray" }}>
+        <div className={classes.right}>
           <div className={classes.upper}>
             {active == "upi" ? (
               <>
@@ -236,21 +236,16 @@ const Payments = (props) => {
                   onKeyDown={handleCard}
                 />
                 <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
+                  className={classes.expiry_warp}
                 >
                   <span
                     style={{ color: "var(--foreground)", fontSize: "1.1rem" }}
                   >
                     VALID THRU
                   </span>
-
+                  <div className={classes.input_warp} style={{display:'flex',width:'100%'}}>
                   <input
                     placeholder="04/30"
-                    style={{ width: "5rem" }}
                     maxLength={5}
                     name='expiry'
                     onKeyDown={handleExpiry}
@@ -258,10 +253,10 @@ const Payments = (props) => {
                   <input
                     placeholder="CVV"
                     type="password"
-                    style={{ width: "50%" }}
                     maxLength={3}
                     onKeyDown={handleCVV}
                   />
+                  </div>
                 </div>
               </>
             )}

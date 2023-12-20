@@ -10,7 +10,7 @@ export const useProductsStore = create((set) => ({
 export const useMerchantDataStore = create((set) => ({
     theme: {},
     name:'',
-    logo:''
+    logo:'https://groww.in/groww-logo-270.png'
   }));
 
 export const useUserDataStore = create((set) => ({

@@ -13,7 +13,7 @@ const Address = () => {
 
   return (
     <div className={classes.address}>
-    <div className={classes.address_inner}>
+    <div className={`${classes.address_upper} ${classes.address_inner}`}>
       <span>Address</span>
       <div>
         <p>Hostel 6, MNIT Jaipur, Jhalana Gram, Malviya Nagar (302017)</p>
@@ -29,9 +29,9 @@ const Address = () => {
       </button>
     </div>
 
-    <div style={{ marginLeft: "1rem" }} className={classes.address_inner}>
-      <span>Contact</span>
-      <input type="text" placeholder="+91 XXXXX XXXXX" maxLength={15} onChange={handleChange} />
+    <div style={{margin:0,padding:0}} className={`${classes.address_lower} ${classes.address_inner}`}>
+      <span style={{margin:0,padding:0,width:'30%'}}>Contact</span>
+      <input style={{margin:0,padding:0,width:'70%'}} type="text" placeholder="+91 XXXXX XXXXX" maxLength={15} onChange={handleChange} />
     </div>
   </div>
   )

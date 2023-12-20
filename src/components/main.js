@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 
 const Main = (props) => {
 
-  const {theme} = useMerchantDataStore()
+  const {theme,name,logo} = useMerchantDataStore()
 
   useQuery('merchant-data',fetchTheme)
 
@@ -16,14 +16,18 @@ const Main = (props) => {
     const data = await res.json();
     useMerchantDataStore.setState({
       theme: data.theme,
-      name: data.name,
-      logo: data.logo,
+      name: data.merchantName,
+      logo: data.merchantLogo,
     });
   }
 
   return (
     <>
       <div className={classes.outter_main} style={theme}>
+        <div className={classes.navbar}>
+          <img src={logo} alt="logo" style={{objectFit:'contain', height:'70%'}}></img>
+          <span style={{color:'var(--foreground)',fontWeight:'bold',letterSpacing:'2px',fontSize:'1.2rem',margin:'0 2rem'}}>{name}</span>
+        </div>
         <div className={classes.inner_main}>{props.children}</div>
       </div>
     </>

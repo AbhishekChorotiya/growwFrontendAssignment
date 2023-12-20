@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Groww Frontend Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This repository contains the code for the Groww frontend assignment. The assignment involved building a dynamic and responsive web application with various features, including caching, interactive elements, validation, and a White Labeling feature.
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+[Link to Live Demo](#) *(if applicable)*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+# Clone the repository
+https://github.com/AbhishekChorotiya/growwFrontendAssignment
 
-### `npm test`
+# Change to the project directory
+cd frontend-assignment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Install dependencies
+npm install
 
-### `npm run build`
+# Start the app
+npm start
+```
+Visit http://localhost:3000 in your browser to view the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
+- Caching: Implemented local API caching using React Query.
+- Responsive Design: Created a responsive and dynamic user interface for various screen sizes.
+- White Labeling: Dynamically changes brand logo, name, and theme based on API data.
+- User input validation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+### Web View
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Find all logs with the level set to "error"
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![App Screenshot](https://github.com/dyte-submissions/november-2023-hiring-AbhishekChorotiya/blob/master/images/levelfilter.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Mobile View
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Find all logs with the level set to "error"
 
-## Learn More
+![App Screenshot](https://github.com/dyte-submissions/november-2023-hiring-AbhishekChorotiya/blob/master/images/levelfilter.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Challenges Faced
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. State Management:
 
-### Code Splitting
+- Initially unfamiliar with Zustand, I took the initiative to learn it during the assignment, integrating it successfully into the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Caching with React Query:
+- The implementation of caching using React Query required learning and integrating this tool, ultimately enhancing the application's performance.
 
-### Analyzing the Bundle Size
+3. Responsive Design:
+- Overcoming challenges in creating a responsive design involved delving into responsive web design principles and employing various CSS techniques.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact Information
 
-### Making a Progressive Web App
+For any inquiries or clarifications, please contact:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Name: Abhishek Chorotiya
+- Email: 2020kuec2033@iiitkota.ac.in (primary) / iam.abhishek8678@gmail.com
+- Phone: +91 8003132368
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

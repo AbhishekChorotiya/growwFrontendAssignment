@@ -6,7 +6,11 @@ This repository contains the code for the Groww frontend assignment. The assignm
 
 ## Live Demo
 
-[Link to Live Demo](#) *(if applicable)*
+[https://groww-frontend-assignment-two.vercel.app/](#) 
+
+## GitHub
+
+[https://github.com/AbhishekChorotiya/growwFrontendAssignment](#)
 
 ## Installation
 
@@ -36,27 +40,38 @@ Visit http://localhost:3000 in your browser to view the application.
 
 ### Web View
 
-Find all logs with the level set to "error"
+Checkout Page
 
-![App Screenshot](https://github.com/dyte-submissions/november-2023-hiring-AbhishekChorotiya/blob/master/images/levelfilter.png)
+![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/checkoutPage.png)
+
+Payments Page
+
+![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/paymentsPage.png)
+
+Confirmation Page
+
+![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/confirmationPage.png)
+
 
 ### Mobile View
 
-Find all logs with the level set to "error"
+Checkout, Payments and Confirmation Pages
 
-![App Screenshot](https://github.com/dyte-submissions/november-2023-hiring-AbhishekChorotiya/blob/master/images/levelfilter.png)
+![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/checkoutPageMobile.png)
+![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/paymentsPageMobile.png)
+![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/confirmationPageMobile.png)
 
 ## Challenges Faced
 
 1. State Management:
 
-- Initially unfamiliar with Zustand, I took the initiative to learn it during the assignment, integrating it successfully into the application.
+- Initially I was unfamiliar with Zustand, But I took the challenge to learn it during the assignment, integrating it successfully into the application.
 
 2. Caching with React Query:
-- The implementation of caching using React Query required learning and integrating this tool, ultimately enhancing the application's performance.
+- I was not knowing caching before so I researched about it on google and found that it can be integrated using React Query (TanStack Query), I learned it while doing the assignment and successfully integrated it.
 
 3. Responsive Design:
-- Overcoming challenges in creating a responsive design involved delving into responsive web design principles and employing various CSS techniques.
+- Perfecting the visual appearance of the website across diverse screens presented certain challenges. These included addressing variations in different browsers, optimizing images for optimal display, and ensuring a cohesive overall aesthetic. The resolution involved a meticulous process of adjustment to guarantee users a seamless and enjoyable experience, irrespective of the device they use.
 
 ## Contact Information
 

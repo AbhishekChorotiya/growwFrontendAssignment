@@ -73,8 +73,19 @@ const Payments = (props) => {
       },
     });
 
-    console.log(useUserDataStore.getState());
-    navigate("/");
+    if(payment_method=='upi'){
+      if(upi_merchant.length==0 && upi_id.length<5){
+        alert('Please select UPI or Enter valid UPI ID')
+        return
+      }
+    }else{
+      if(card.name.length<3 || card.number.length!=16 || card.expiry.length<5 || card.cvv.length<3){
+        alert('Please Enter Valid Card Details!!') 
+        return
+      }
+    }
+
+    navigate("/confirmation");
   }
 
   function handleUpiMerchant(merchant) {

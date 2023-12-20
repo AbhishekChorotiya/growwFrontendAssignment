@@ -1,11 +1,22 @@
 import React from "react";
 import classes from "./summary.module.css";
 import { useNavigate } from "react-router-dom";
+import { useUserDataStore } from "../store/zustland";
 
 const Summary = (props) => {
   const subtotal = props.subtotal;
   const tax = props.tax;
   const navigate = useNavigate()
+
+  const {contact} = useUserDataStore()
+
+  function handleClick(){
+    if(contact.length<10){
+      alert('Enter Valid Contact No.')
+      return
+    }
+    navigate('/payment')
+  }
 
   return (
     <>
@@ -44,7 +55,7 @@ const Summary = (props) => {
         <input type="text" placeholder="Have any Coupon ?" />
         <span>APPLY</span>
       </div>
-      <button className={classes.checkout_btn} onClick={()=>navigate('/payment')}>Confirm Checkout</button>
+      <button className={classes.checkout_btn} onClick={handleClick}>Confirm Checkout</button>
       </>
   );
 };

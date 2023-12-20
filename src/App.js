@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Payments from "./components/paymentspage/payments";
 import Checkout from "./components/checkout/checkout";
 import { QueryClient, QueryClientProvider, useQuery, useQueryClient } from "react-query";
+import Confirm from "./components/order_confirmation/confirm";
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Checkout />} />
           <Route path="/payment" element={<Payments />} />
+          <Route path="/confirmation" element={<Confirm />} />
+          
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

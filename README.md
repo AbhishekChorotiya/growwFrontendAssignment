@@ -61,17 +61,7 @@ Checkout, Payments and Confirmation Pages
 ![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/paymentsPageMobile.png)
 ![App Screenshot](https://github.com/AbhishekChorotiya/growwFrontendAssignment/blob/main/images/confirmationPageMobile.png)
 
-## Challenges Faced
 
-1. State Management:
-
-Initially I was unfamiliar with Zustand, But I took the challenge to learn it during the assignment, integrating it successfully into the application.
-
-2. Caching with React Query:
-I was not knowing caching before so I researched about it on google and found that it can be integrated using React Query (TanStack Query), I learned it while doing the assignment and successfully integrated it.
-
-3. Responsive Design:
-Perfecting the visual appearance of the website across diverse screens presented certain challenges. These included addressing variations in different browsers, optimizing images for optimal display, and ensuring a cohesive overall aesthetic. The resolution involved a meticulous process of adjustment to guarantee users a seamless and enjoyable experience, irrespective of the device they use.
 
 ## Contact Information
 
